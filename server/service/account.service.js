@@ -10,16 +10,19 @@ class AccountService {
 
     async postAccount(username, password) {
         const url = `${this.BASE_ENDPOINT}/Account/SignIn`
-        var res;
         try{
-            res = await axios.post(
+            const res = await axios.post(
                 url, 
-                {username: username, password: password })    
+                {
+                    username: username,
+                    password: password 
+                }
+            )    
+            return res
         }
         catch(error){
             throw error
         }
-        return res
     }
 }
 

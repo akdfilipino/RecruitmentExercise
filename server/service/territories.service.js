@@ -5,7 +5,7 @@ class TerritoriesService {
 
     constructor() {
         config()
-        this.BASE_ENDPOINT = process.env.BASE_ENDPOINT ?? "http://localhost:3001"
+        this.BASE_ENDPOINT = process.env.BASE_ENDPOINT || "http://localhost:3001"
     }
 
     async getTerritories(){

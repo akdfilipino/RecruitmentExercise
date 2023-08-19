@@ -4,8 +4,8 @@ const territoryService = require('../service/territories.service')
 
 
 router.get('/All', async (req, res) => {
-    const territories = await territoryService.getTerritories()
     try {
+        const territories = await territoryService.getTerritories()
         await res.status(200).json({
             data: territories.data
         })
