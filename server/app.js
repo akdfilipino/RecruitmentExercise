@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-const territoriesRouter = require('../server/routers/territories.router')
-const accountRouter = require('../server/routers/account.router')
+const territoriesRouter = require('./routers/territories.router')
+const accountRouter = require('./routers/account.router')
 
 const app = express()
 app.use(cors())

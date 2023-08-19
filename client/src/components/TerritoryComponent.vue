@@ -8,7 +8,7 @@
 <template>
     <li v-if="show">
         <span class="caret" v-show="show" :key="territory.id" @click="show = !show">{{ territory.name }}</span>
-        <ul class="nested" v-for="child in this.territory.children">
+        <ul class="nested" v-for="child in territory.children">
             <TerritoryComponent :key="child.id" :territory="child"/>
         </ul>
     </li>
